@@ -5,22 +5,22 @@ import pandas as pd
 from collections import Counter
 
 # Load encoders
-Internetservice_le = pkl.load(open('Encoding/InternetService_le.pkl', 'rb'))
-Paymentmethod_le = pkl.load(open('Encoding/PaymentMethod_le.pkl', 'rb'))
-Contract_Oe = pkl.load(open('Encoding/Contract_oe.pkl', 'rb'))
+Internetservice_le = pkl.load(open('Deployment/Encoding/InternetService_le.pkl', 'rb'))
+Paymentmethod_le = pkl.load(open('Deployment/Encoding/PaymentMethod_le.pkl', 'rb'))
+Contract_Oe = pkl.load(open('Deployment/Encoding/Contract_oe.pkl', 'rb'))
 
 # Load scaler and models
-scaler = pkl.load(open('Scaling/scaler.pkl', 'rb'))
+scaler = pkl.load(open('Deployment/Scaling/scaler.pkl', 'rb'))
 models = {
-    'Decision Tree': pkl.load(open('Models/Decision Tree.pkl', 'rb')),
-    'Logistic Regression': pkl.load(open('Models/LogisticRegression.pkl', 'rb')),
-    'SVC': pkl.load(open('Models/SVC.pkl', 'rb')),
-    'KNN': pkl.load(open('Models/KNN.pkl', 'rb')),
-    'Random Forest': pkl.load(open('Models/RandomForest.pkl', 'rb')),
-    'Gradient Boosting': pkl.load(open('Models/GradientBoosting.pkl', 'rb')),
-    'XGBoost': pkl.load(open('Models/XGBoost.pkl', 'rb')),
-    'AdaBoost': pkl.load(open('Models/AdaBoost.pkl', 'rb')),
-    'Stacking': pkl.load(open('Models/Stacking.pkl', 'rb')),
+    'Decision Tree': pkl.load(open('Deployment/Models/Decision Tree.pkl', 'rb')),
+    'Logistic Regression': pkl.load(open('Deployment/Models/LogisticRegression.pkl', 'rb')),
+    'SVC': pkl.load(open('Deployment/Models/SVC.pkl', 'rb')),
+    'KNN': pkl.load(open('Deployment/Models/KNN.pkl', 'rb')),
+    'Random Forest': pkl.load(open('Deployment/Models/RandomForest.pkl', 'rb')),
+    'Gradient Boosting': pkl.load(open('Deployment/Models/GradientBoosting.pkl', 'rb')),
+    'XGBoost': pkl.load(open('Deployment/Models/XGBoost.pkl', 'rb')),
+    'AdaBoost': pkl.load(open('Deployment/Models/AdaBoost.pkl', 'rb')),
+    'Stacking': pkl.load(open('Deployment/Models/Stacking.pkl', 'rb')),
 }
 
 # Function to predict churn
