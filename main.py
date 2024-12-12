@@ -17,7 +17,7 @@ models = {
     'SVC': pkl.load(open('Deployment/Models/SVC.pkl', 'rb')),
     'KNN': pkl.load(open('Deployment/Models/KNN.pkl', 'rb')),
     'Random Forest': pkl.load(open('Deployment/Models/RandomForest.pkl', 'rb')),
-    'Gradient Boosting': pkl.load(open('Deployment/Models/GradientBoosting.pkl', 'rb')),
+    #'Gradient Boosting': pkl.load(open('Deployment/Models/GradientBoosting.pkl', 'rb')),
     'XGBoost': pkl.load(open('Deployment/Models/XGBoost.pkl', 'rb')),
     'AdaBoost': pkl.load(open('Deployment/Models/AdaBoost.pkl', 'rb')),
     'Stacking': pkl.load(open('Deployment/Models/Stacking.pkl', 'rb')),
@@ -41,8 +41,8 @@ def display_predictions(predictions):
     # Split predictions into three parts
     predictions_items = list(predictions.items())
     num_items = len(predictions_items)
-    first_third = predictions_items[:num_items // 3]
-    second_third = predictions_items[num_items // 3:2 * num_items // 3]
+    first_third = predictions_items[:num_items // 3+1]
+    second_third = predictions_items[num_items // 3+1:2 * num_items // 3]
     last_third = predictions_items[2 * num_items // 3:]
 
     # Display first third in the first column
